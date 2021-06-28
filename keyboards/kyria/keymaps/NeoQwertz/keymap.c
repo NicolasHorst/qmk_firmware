@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
-#include keymap_german.h
+#include "keymap_german.h"
 
 enum layers {
     _QWERTY = 0,
@@ -61,8 +61,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LOWER] = LAYOUT(
       _______, DE_EURO, DE_UNDS,  DE_LBRC, DE_RBRC, DE_CIRC,                                     DE_EXLM, DE_LABK, DE_RABK, DE_EQL, DE_AMPR,  _______,
       _______, DE_BSLS, DE_SLSH,  DE_LCBR, DE_RCBR, DE_ASTR,                                     DE_QUES, DE_LPRN, DE_RPRN, DE_MINS, DE_COLN, DE_AT,
-      _______, DE_HASH, DE_DLR,   DE_PIPE, DE_TILD, DE_GRV,  _______, _______, _______, _______, DE_PLUS, DE_PERC, DE_DQUO, DE_QUOT, DE_SCLN, _______,
-                                 _______, _______, _______, ________, _______, _______, _______, _______, _______, _______
+      _______, DE_HASH, DE_DLR,   DE_PIPE, DE_TILD, DE_GRV, _______, _______, _______, _______, DE_PLUS, DE_PERC, DE_DQUO, DE_QUOT, DE_SCLN, _______,
+                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 /*
  * Raise Layer: Number keys, media, navigation
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |        |Home  | Left | Down | Right|  End |                              |      |   4  |   5  |   6  |  .   |   .    |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        | Esc  | Tab  | Quit | Enter| Undo |      |      |  |      |      | :    |   1  |   2  |   3  |  ;   |   ;    |
+ * |        | Esc  | Tab  | Quit | Enter| Undo |      |      |  |      |      | :    |   1  |   2  |   3  |  ;   |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      |      |      |      |  |      |      |  0   |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_RAISE] = LAYOUT(
       _______, _______, KC_BSPC,    KC_UP,  KC_DEL, _______,                                     _______,    DE_7,    DE_8,    DE_9, DE_PLUS, DE_MINS,
       _______, KC_HOME, KC_LEFT,  KC_DOWN, KC_RGHT, KC_END,                                      _______,    DE_4,    DE_5,    DE_6, DE_COMM,  DE_DOT,
-      _______, KC_ESC,  KC_TAB,LCMD(KC_W),  KC_ENT, KC_UNDO, _______, _______, _______, _______, DE_COLN,    DE_1,    DE_2,    DE_3, DE_SCLN,
+      _______, KC_ESC,  KC_TAB,LCMD(KC_W),  KC_ENT, KC_UNDO, _______, _______, _______, _______, DE_COLN,    DE_1,    DE_2,    DE_3, DE_SCLN, _______,
                                   _______, _______, _______, _______, _______, _______, _______,    DE_0, _______, _______
     ),
 
