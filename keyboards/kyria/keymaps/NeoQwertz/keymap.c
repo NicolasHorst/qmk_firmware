@@ -23,26 +23,27 @@ enum layers {
     _ADJUST
 };
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
  * Base Layer: QWERTY
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |RAIS/ESC|   Q  |   W  |   E  |   R  |   T  |                              |   Z  |   U  |   I  |   O  |   P  |   Ü    |
+ * |  TAB   |   Q  |   W  |   E  |   R  |   T  |                              |   Z  |   U  |   I  |   O  |   P  |   Ü    |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |Ctrl/BS |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  |   Ö  |   Ä    |
+ * |  ESC   |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  |   Ö  |   Ä    |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | LShift |   Y  |   X  |   C  |   V  |   B  |LShift|LShift|  |LShift|LShift|   N  |   M  | ,  < | . >  |   ß  | LShift |
+ * |  Ctrl  |   Y  |   X  |   C  |   V  |   B  |LShift|LShift|  |LShift|LShift|   N  |   M  | ,  ; | . :  |   ß  | LShift |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        | GUI  | Del  | Enter| Space| Esc  |  | Enter| Space| Tab  | Bksp | AltGr|
- *                        |      |      | Alt  | Lower| Raise|  | Lower| Raise|      |      |      |
+ *                        |      | Bksp | Space| Tab  | Enter|  | Enter| Tab  | Space| Del  |      |
+ *                        |Option| Cmd  |LShift| Lower| Raise|  | Raise| Lower|RShift| Cmd  |Option|
  *                        `----------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
-      LT(_RAISE, KC_ESC),      KC_Q,   KC_W,     KC_E,                 KC_R,                  KC_T,                                                                           KC_Y,                  KC_U,                  KC_I,    KC_O,    KC_P,    DE_UDIA,
-      MT(MOD_LCTL, KC_BSPC),   KC_A,   KC_S,     KC_D,                 KC_F,                  KC_G,                                                                           KC_H,                  KC_J,                  KC_K,    KC_L,    DE_ODIA, MT(MOD_LCTL, DE_ADIA),
-      KC_LSFT,                 KC_Z,   KC_X,     KC_C,                 KC_V,                  KC_B,               KC_LSFT,   KC_LSFT, KC_LSFT,            KC_LSFT,            KC_N,                  KC_M,                  KC_COMM, KC_DOT,  DE_SS,   KC_LSFT,
-                                       MOD_LALT, MT(MOD_LGUI, KC_BSPC), MT(MOD_LSFT, KC_SPC),  LT(_LOWER, KC_ESC), LT(_RAISE, KC_ENT), LT(_RAISE, KC_ENT), LT(_LOWER, KC_ESC), MT(MOD_RSFT, KC_SPC),  MT(MOD_RGUI, KC_DEL), MOD_RALT
+      KC_TAB,                  KC_Q,   KC_W,     KC_E,                 KC_R,                  KC_T,                                                                           KC_Y,                  KC_U,                  KC_I,    KC_O,    KC_P,    DE_UDIA,
+      KC_ESC,                  KC_A,   KC_S,     KC_D,                 KC_F,                  KC_G,                                                                           KC_H,                  KC_J,                  KC_K,    KC_L,    DE_ODIA, DE_ADIA,
+      MOD_LCTL,                KC_Z,   KC_X,     KC_C,                 KC_V,                  KC_B,               KC_LSFT,   KC_LSFT, KC_LSFT,            KC_LSFT,            KC_N,                  KC_M,                  KC_COMM, KC_DOT,  DE_SS,   MOD_LCTL,
+                                       MOD_LALT, MT(MOD_LGUI, KC_BSPC), MT(MOD_LSFT, KC_SPC),  LT(_LOWER, KC_TAB), LT(_RAISE, KC_ENT), LT(_RAISE, KC_ENT), LT(_LOWER, KC_TAB), MT(MOD_RSFT, KC_SPC),  MT(MOD_RGUI, KC_DEL), MOD_RALT
     ),
 /*
  * Lower Layer: Symbols
