@@ -4,9 +4,9 @@ layer3keys = list(ascii_lowercase)
 layer3keys.append("(")
 layer3keys.append(";")
 layer3keys.append("'")
-layer3keys.append("-")
 layer3keys.append(".")
 layer3keys.append(",")
+layer3keys.append("/")
 
 layer4keys = ["y", "h", "q", "t"]
 
@@ -21,6 +21,8 @@ def create_key(key):
         key = "DOT"
     elif key == ",":
         key = "COMM"
+    elif key == "/":
+        key = "SLASH"
     elif key == "-":
         key = "MINUS"
     else:

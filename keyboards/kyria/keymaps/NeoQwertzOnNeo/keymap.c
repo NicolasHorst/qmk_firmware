@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LOWER] = LAYOUT(
       KC_TAB,   L3_Q,   L3_W,     L3_E,    L3_R,    L3_T,                                        L3_Y,    L3_U,    L3_I,   L3_O,     L3_P,  _______,
       KC_ESC,   L3_A,   L3_S,     L3_D,    L3_F,    L3_G,                                        L3_H,    L3_J,    L3_K,   L3_L,     L3_OE,   L3_AE,
-      KC_LCTL,  L3_Z,   L3_X,     L3_C,    L3_V,    L3_B, _______, _______, _______, _______,    L3_N,    L3_M, L3_COMM, L3_DOT,  L3_MINUS, KC_RCTL,
+      KC_LCTL,  L3_Z,   L3_X,     L3_C,    L3_V,    L3_B, _______, _______, _______, _______,    L3_N,    L3_M, L3_COMM, L3_DOT,  L3_SLASH, KC_RCTL,
                                _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 /*
@@ -80,9 +80,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_RAISE] = LAYOUT(
-      _______,          L4_Q, KC_BSPC,     KC_UP,  KC_DEL,          L4_T,                                        L4_Y,    DE_7,    DE_8,    DE_9,     L3_N,    L3_L,
-      _______, LCMD(KC_LEFT), KC_LEFT,   KC_DOWN, KC_RGHT, LCMD(KC_RGHT),                                        L4_H,    DE_4,    DE_5,    DE_6,  DE_COMM,  DE_DOT,
-      _______,        KC_ESC,  KC_TAB,LCMD(KC_W),  KC_ENT,    LCMD(DE_Z), _______, _______, _______, _______, DE_COLN,    DE_1,    DE_2,    DE_3, L3_MINUS, _______,
+      RGB_TOG,          L4_Q, KC_BSPC,     KC_UP,  KC_DEL,          L4_T,                                        L4_Y,    DE_7,    DE_8,    DE_9,     L3_N,    L3_L,
+      RGB_MOD, LCMD(KC_LEFT), KC_LEFT,   KC_DOWN, KC_RGHT, LCMD(KC_RGHT),                                        L4_H,    DE_4,    DE_5,    DE_6,  DE_COMM,  DE_DOT,
+      _______,        KC_ESC,  KC_TAB,LCMD(KC_W),  KC_ENT,    LCMD(DE_Z), _______, _______, _______, _______,   L3_OE,    DE_1,    DE_2,    DE_3, L3_SLASH, _______,
                               _______,   _______, _______,       _______, _______, _______, _______,    DE_0, _______, _______
     ),
 

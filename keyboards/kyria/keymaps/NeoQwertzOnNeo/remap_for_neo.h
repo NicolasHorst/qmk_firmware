@@ -28,9 +28,9 @@ L3_Z,
 L3_UE,
 L3_OE,
 L3_AE,
-L3_MINUS,
 L3_DOT,
 L3_COMM,
+L3_SLASH,
 L4_Y,
 L4_H,
 L4_Q,
@@ -155,16 +155,16 @@ case L3_AE:
    if (record->event.pressed) {SEND_STRING(SS_DOWN(X_CAPSLOCK) "'" SS_UP(X_CAPSLOCK));}
    else {}
 break;
-case L3_MINUS:
-   if (record->event.pressed) {SEND_STRING(SS_DOWN(X_CAPSLOCK) "-" SS_UP(X_CAPSLOCK));}
-   else {}
-break;
 case L3_DOT:
    if (record->event.pressed) {SEND_STRING(SS_DOWN(X_CAPSLOCK) "." SS_UP(X_CAPSLOCK));}
    else {}
 break;
 case L3_COMM:
    if (record->event.pressed) {SEND_STRING(SS_DOWN(X_CAPSLOCK) "," SS_UP(X_CAPSLOCK));}
+   else {}
+break;
+case L3_SLASH:
+   if (record->event.pressed) {SEND_STRING(SS_DOWN(X_CAPSLOCK) "/" SS_UP(X_CAPSLOCK));}
    else {}
 break;
 case L4_Y:
